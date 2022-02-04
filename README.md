@@ -18,4 +18,5 @@ Febrero de 2022
 # Feeds de Prueba
 
 - Xataka Android: https://www.xatakandroid.com/tag/feeds/rss2.xml
-- Momento CarPi: https://momentocarpi.com/feed/
+- Momento CarPi: https://momentocarpi.com/?feed=atom
+- Microsiervos: https://www.microsiervos.com/index.xml
