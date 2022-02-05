@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import useFetchRSS from "../../hooks/useFetchRSS";
 
 export default function RssList() {
@@ -17,7 +17,9 @@ export default function RssList() {
           <div key={index} className="rss-item">
             <div className="rss-item-card">
               <div className="rss-item-col">
-                <img src={`${item.image}?=${item.id}`} width="100" height="70" className="rss-item-image"></img>
+                <a href={`/${item.title.replaceAll(" ", "-").toLowerCase()}`}>
+                  <img src={`${item.image}?=${item.id}`} width="100" height="70" className="rss-item-image"></img>
+                </a>
               </div>
               <div className="rss-item-col">
                 <h2 className="rss-item-title">

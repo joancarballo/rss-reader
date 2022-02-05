@@ -1,7 +1,4 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-// import "./App.css";
-
-// import Header from "./components/Header/Header";
 import RssList from "./components/RssList/RssList";
 import RssItem from "./components/RssItem/RssItem";
 import Home from "./views/Home";
