@@ -30,7 +30,7 @@ export default function RssList() {
                     {item.author} on {item.date}
                   </p>
                   <a href={item.link} target="_blank">
-                    <img src={require("../../assets/icon-new-tab.png")} width="16" height="16" alt="Open Original in new tab" className="rss-item-outlink"></img>
+                    <img src={require("../../assets/icon-new-tab.png")} width="10px" height="10px" alt="Open Original in new tab" className="rss-item-outlink"></img>
                   </a>
                 </div>
                 <div className="rss-item-row rss-item-description">
