@@ -3,17 +3,15 @@ import { useParams } from "react-router-dom";
 
 export default function RssItem() {
   const rssURL = "https://www.microsiervos.com/index.xml";
-  const { items, error, loading } = useFetchRSS(rssURL);
+  const { items } = useFetchRSS(rssURL);
 
   let params = useParams();
-  console.log(params);
 
   const findItem = () => {
-    return items?.find((item) => item.title.replaceAll(" ", "-").toLowerCase() == params.title);
+    return items?.find((item) => item.title.replaceAll(" ", "-").toLowerCase() === params.title);
   };
 
   const result = findItem();
-  console.log(result);
 
   return (
     <div className="rss-article-view">
@@ -24,7 +22,7 @@ export default function RssItem() {
       </div>
       <div className="rss-article-head-row">
         <div className="rss-article-head-col">
-          <img src={`${result?.image}?=${result?.id}`} width="300px" height="200px" className="rss-article-image"></img>
+          <img src={`${result?.image}?=${result?.id}`} width="300px" height="200px" className="rss-article-image" alt={result?.title}></img>
         </div>
         <div className="rss-article-head-col">
           <h2>{result?.title}</h2>
