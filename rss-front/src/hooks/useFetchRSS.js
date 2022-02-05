@@ -18,7 +18,8 @@ export default function useFetchRSS(url) {
           title: i.querySelector("title").innerHTML,
           author: i.querySelector("author").innerHTML,
           description: i.querySelector("description").innerHTML,
-          date: i.querySelector("pubDate").innerHTML,
+          date: i.querySelector("pubDate").innerHTML.slice(0, -15),
+          image: "https://picsum.photos/200/300",
           id: index,
         }));
         setItems(feedItems);

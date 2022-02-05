@@ -76,13 +76,65 @@
 }
 
 .rss-item {
-  border: 1px solid red;
+  border: 1px solid gainsboro;
+  margin-top: 0.3rem;
+  border-radius: 5px;
 }
 
-.rss-item-title {
+.rss-item-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.rss-item-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-right: 2rem;
+  align-items: baseline;
+}
+
+.rss-item-card {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
+}
+
+.rss-item-image {
+  margin: 1rem;
+}
+
+.rss-item-title {
+  margin: 1rem 0.5rem 0.3rem 0;
+  text-decoration: none;
+}
+
+.rss-item-title a {
+  text-decoration: none;
+  color: black;
+}
+
+.rss-item-author {
+  margin-top: 0.3rem;
+  margin-bottom: 0.1rem;
+}
+
+.rss-item-outlink {
+  margin-left: 0.5rem;
+}
+
+.rss-item-description {
+  margin-top: 0.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.rss-item-description a {
+  color: grey;
+  text-decoration: none;
+}
+
+.rss-item-description a:visited {
+  color: grey;
 }
 
 .rss-item-viewer {

@@ -15,15 +15,27 @@ export default function RssList() {
       {items?.map((item, index) => {
         return (
           <div key={index} className="rss-item">
-            <div className="rss-item-title">
-              <h2>
-                <a href={`/${item.title.replaceAll(" ", "-").toLowerCase()}`}>{item.title}</a>
-              </h2>
-              <p>
-                {item.author} on {item.date}
-              </p>
+            <div className="rss-item-card">
+              <div className="rss-item-col">
+                <img src={`${item.image}?=${item.id}`} width="100" height="70" className="rss-item-image"></img>
+              </div>
+              <div className="rss-item-col">
+                <h2 className="rss-item-title">
+                  <a href={`/${item.title.replaceAll(" ", "-").toLowerCase()}`}>{item.title}</a>
+                </h2>
+                <div className="rss-item-row">
+                  <p className="rss-item-author ">
+                    {item.author} on {item.date}
+                  </p>
+                  <a href={item.link} target="_blank">
+                    <img src={require("../../assets/icon-new-tab.png")} width="16" height="16" alt="Open Original in new tab" className="rss-item-outlink"></img>
+                  </a>
+                </div>
+                <div className="rss-item-row rss-item-description">
+                  <a href={`/${item.title.replaceAll(" ", "-").toLowerCase()}`}>{item.description.substring(300, 500)}</a>
+                </div>
+              </div>
             </div>
-            <a href={item.link}>Leer Completo</a>
           </div>
         );
       })}
