@@ -66,6 +66,12 @@
   color: #2e2e2e;
 }
 
+.rss-app-name-link {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
 .rss-container {
   display: flex;
   flex-direction: column;
@@ -75,9 +81,7 @@
 }
 
 .rss-item {
-  /* border: 1px solid gainsboro; */
   margin-top: 0.3rem;
-  /* border-radius: 5px; */
   padding-left: 3rem;
   padding-right: 3rem;
 }
@@ -195,4 +199,25 @@
 
 .rss-article-backarrow {
   margin-right: 10px;
+}
+
+.rss-header-profile-links {
+  position: absolute;
+  right: 4rem;
+}
+
+.rss-header-profile-links ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.rss-header-profile-links li {
+  display: inline;
+  margin: 0.5rem;
+  transition: 0.2s;
+}
+
+.rss-header-profile-links li :hover {
+  transform: scale(1.5);
 }
